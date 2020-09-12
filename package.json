@@ -1,0 +1,34 @@
+{
+  "name": "custom-fn",
+  "version": "0.0.1",
+  "description": "自定义函数封装",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -wc rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
+  },
+  "author": "sisc <1962109568@qq.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clinfc/m-observer"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.5.0",
+    "rollup": "^2.22.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-terser": "^6.1.0"
+  }
+}
