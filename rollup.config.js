@@ -56,7 +56,7 @@ function createExports() {
     exports.push({
       input: path.resolve(__dirname, src),
       output: {
-        file: path.resolve(__dirname, IS_PRODUCTION ? `dist/${name}.min.${file}` : `dist/${file}`),
+        file: path.resolve(__dirname, IS_PRODUCTION ? `dist/${name}.min.${mime}` : `dist/${file}`),
         format: 'umd',
         // 转成大驼峰
         name: name.replace(/([-_]+[a-z])/g, function(t) {
