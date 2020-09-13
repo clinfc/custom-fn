@@ -93,11 +93,11 @@
     switch (type(response)) {
       // 模板字符串
       case 'string':
-        return format.replaceTemplate(response, baseData);
+        return format.replaceTemplate(baseData, response);
       // 由模板字符串组成的数组
 
       case 'array':
-        return response.map(template => format.replaceTemplate(template, baseData));
+        return response.map(template => format.replaceTemplate(baseData, template));
       // 由模板字符串组成的对象
 
       case 'object':
@@ -105,7 +105,7 @@
           let temp = {};
 
           for (let [k, v] of Object.entries(response)) {
-            temp[k] = format.replaceTemplate(v, baseData);
+            temp[k] = format.replaceTemplate(baseData, v);
           }
 
           return temp;
@@ -121,7 +121,7 @@
     }
   } // 模板替换
 
-  format.replaceTemplate = function (template, baseData) {
+  format.replaceTemplate = function (baseData, template) {
     if (type(template) != 'string') {
       format.templateError();
     }
