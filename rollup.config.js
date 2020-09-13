@@ -35,7 +35,6 @@ else {
 function readFileNames(basePath) {
   let temp = []
   for(let file of fs.readdirSync(basePath)) {
-    console.log(file);
     let src = path.join(basePath, file)
     if (fs.statSync(src).isFile()) {
       temp.push([ basePath, file ])
